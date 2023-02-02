@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ngOnInit() {
     this.cityControl = new FormControl("");
+
     this.cityControl.valueChanges
       .subscribe(value => {
         this.router.navigate([value]);
