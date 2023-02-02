@@ -1,7 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
-import {AppComponent} from './app.component';
 import {Route, RouterModule} from "@angular/router";
 import { WeatherReportComponent } from './components/weather-report/weather-report.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -13,6 +11,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
+
+import {AppComponent} from './app.component';
 
 const routes: Route[] = [
   {path: ':locationName', component: WeatherReportComponent}
