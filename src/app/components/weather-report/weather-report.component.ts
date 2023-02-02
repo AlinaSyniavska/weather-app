@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {WeatherService} from "../../services";
 import {ActivatedRoute} from "@angular/router";
 import {concatMap, filter, map, Observable} from "rxjs";
+import {IWeather} from "../../interfaces";
 
 @Component({
   selector: 'app-weather-report',
@@ -10,7 +11,7 @@ import {concatMap, filter, map, Observable} from "rxjs";
 })
 export class WeatherReportComponent implements OnInit {
 
-  data: Observable<any>;
+  data: Observable<IWeather>;
   today: Date = new Date();
   loading = false;
 

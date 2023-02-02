@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class AppComponent implements OnInit, OnDestroy{
 
-  cities = ["London", "Paris", "Kyiv", "New York", "Sydney", "Zaporizhzhia"];
+  cities = ["London", "Paris", "Kyiv", "New York", "Sydney", "Zaporizhzhia", "Irpin"];
 
   cityControl: FormControl;
 
