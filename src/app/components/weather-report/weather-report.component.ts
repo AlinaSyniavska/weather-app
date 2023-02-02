@@ -23,6 +23,8 @@ export class WeatherReportComponent implements OnInit {
       concatMap(name => this.weatherService.getWeatherForCity(name))
     );
 
+    console.log(this.data);
+
   }
 
 }
