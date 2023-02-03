@@ -4,7 +4,7 @@
 
 <div class="content">
   <div class="flex-row">
-    <mat-form-field class="mr">
+    <mat-form-field>
       <mat-label>Select country</mat-label>
       <mat-select [formControl]="countryControl">
         <mat-option *ngFor="let country of countries" [value]="country">
@@ -21,7 +21,6 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <br/>
 
   <router-outlet></router-outlet>
 </div>
