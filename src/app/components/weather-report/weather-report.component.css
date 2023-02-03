@@ -32,6 +32,10 @@ mat-card::ng-deep.mat-card-header-text {
   padding: 10px;
   color: black;
   background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-row > .temp {
@@ -43,11 +47,6 @@ mat-card::ng-deep.mat-card-header-text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.outlook > span {
-  display: inline-block;
-  text-align: center;
 }
 
 .big-text {

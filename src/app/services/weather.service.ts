@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {delay, map, Observable} from "rxjs";
 import {IWeather} from "../interfaces";
 
 @Injectable({
@@ -18,6 +18,7 @@ export class WeatherService {
         ...data,
         image: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       })),
+      delay(500)
     );
   }
 }
