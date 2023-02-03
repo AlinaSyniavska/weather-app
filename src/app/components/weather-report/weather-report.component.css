@@ -49,6 +49,11 @@ mat-card::ng-deep.mat-card-header-text {
   align-items: center;
 }
 
+.flex-row > .outlook > span {
+  display: block;
+  text-align: center;
+}
+
 .big-text {
   font-size: 30px;
 }
