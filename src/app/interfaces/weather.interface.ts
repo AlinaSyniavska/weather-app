@@ -1,4 +1,5 @@
 export interface IWeather {
+  image: string;
   cod: number,
   coord: {  //ICoordCity
     lat: number,
