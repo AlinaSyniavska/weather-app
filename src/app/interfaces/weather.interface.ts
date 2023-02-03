@@ -1,40 +1,19 @@
+import {ICoordCity} from "./coordCity.interface";
+import {IMainWeatherIndicator} from "./mainWeatherIndicator.interface";
+import {ISysCityInfo} from "./sysCityInfo.interface";
+import {ICloudinessWeatherIndicator} from "./cloudinessWeatherIndicator.interface";
+import {IWindWeatherIndicator} from "./windWeatherIndicator.interface";
+
 export interface IWeather {
-  image: string;
+  image?: string;
   cod: number,
-  coord: {  //ICoordCity
-    lat: number,
-    lon: number,
-  },
-  main: {  //IMainWeatherIndicator
-    feels_like: number,
-    grnd_level: number,
-    humidity: number,
-    pressure: number,
-    sea_level: number,
-    temp: number,
-    temp_max: number,
-    temp_min: number,
-  },
+  coord: ICoordCity,
+  main: IMainWeatherIndicator,
   name: string,
-  sys: {  //ISysCityInfo
-    country: string,
-    sunrise: number,
-    sunset: number,
-  },
+  sys: ISysCityInfo,
   timezone: number,
   visibility: number,
-  weather: [  //ICloudinessWeatherIndicator
-    {
-      description: string,
-      icon: string,
-      id: number,
-      main: string,
-    },
-  ],
-  wind: {  //IWindWeatherIndicator
-    deg: number,
-    gust: number,
-    speed: number,
-  },
+  weather: ICloudinessWeatherIndicator[],
+  wind: IWindWeatherIndicator,
 }
 
