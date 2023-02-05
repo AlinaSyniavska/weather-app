@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   ];
 
-  cities: Observable<string>;
+  cities$: Observable<string>;
 
   countryControl: FormControl;
   cityControl: FormControl;
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.router.navigate([value]);
       });
 
-    this.cities = this.countryControl.valueChanges.pipe(
+    this.cities$ = this.countryControl.valueChanges.pipe(
       map(country => country.cities)
     );
 

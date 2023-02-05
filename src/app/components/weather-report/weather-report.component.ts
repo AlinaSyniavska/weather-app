@@ -11,7 +11,7 @@ import {IWeather} from "../../interfaces";
 })
 export class WeatherReportComponent implements OnInit {
 
-  data: Observable<IWeather>;
+  data$: Observable<IWeather>;
   today: Date = new Date();
   loading = false;
 
@@ -19,7 +19,7 @@ export class WeatherReportComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.data = this.activatedRoute.params.pipe(
+    this.data$ = this.activatedRoute.params.pipe(
       map(params => params["locationName"]),
       filter(name => !!name),
       tap(() => {
